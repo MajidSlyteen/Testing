@@ -1,0 +1,7 @@
+import yfinance as yf
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+obj = yf.Ticker('TSLA')
+tesla_data = obj.history('max')
+tesla_data.reset_index(inplace=True)
+print(tesla_data.head())
